@@ -21,19 +21,19 @@ Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 1
 
 //my solution
 
+const sentence = 'The sunset sets at twelve o\' clock.'
+
 const alphabetPosition = (string) => {
-    let numString = ''
-    let correspondences = 
-
-
-
-
-    return numString
-    return correspondences
+	let alphaPos = ''
+	for (let i = 0; i < string.length; i++) {       
+		let nums = string.toUpperCase().charCodeAt(i)
+		if (nums > 64 && nums < 91) alphaPos += (nums - 64) + ' '
+	}
+	return alphaPos.slice(0, alphaPos.length - 1) 
 }
 
-const a = 'The sunset sets at twelve o\' clock.'
-console.log(alphabetPosition(a))
+console.log(alphabetPosition(sentence))
+
 
 
 //top-voted solution on CodeWars:
