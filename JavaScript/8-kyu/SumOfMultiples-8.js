@@ -1,4 +1,6 @@
-/* https://www.codewars.com/kata/sum-of-multiples/discuss
+/* 
+(JavaScript)
+https://www.codewars.com/kata/sum-of-multiples/discuss
 
 8 kyu
 Code Wars Kata Instructions:

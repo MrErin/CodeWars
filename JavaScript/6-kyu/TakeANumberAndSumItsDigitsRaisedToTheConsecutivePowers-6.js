@@ -1,4 +1,7 @@
-/* https://www.codewars.com/kata/5626b561280a42ecc50000d1
+/* 
+(JavaScript)
+
+https://www.codewars.com/kata/5626b561280a42ecc50000d1
 
 6 kyu
 Code Wars Kata Instructions:
@@ -54,7 +57,7 @@ console.log(sumDigPow(0, 150));
 function sumDigPow(a, b) {
   const ans = [];
   while (a <= b) {
-    if (a.toString().split('').reduce((x, y, i) => x + +y ** (i + 1), 0) == a) { ans.push(a); }
+    if (a.toString().split('').reduce((x, y, i) => x + +y * (i + 1), 0) == a) { ans.push(a); }
     a++;
   }
   return ans;

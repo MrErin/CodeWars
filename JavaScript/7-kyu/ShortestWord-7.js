@@ -1,4 +1,6 @@
-/* https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9
+/* 
+(JavaScript)
+https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9
 
 7 kyu
 Code Wars Kata Instructions:
