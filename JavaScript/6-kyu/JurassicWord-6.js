@@ -40,27 +40,34 @@ NOTE: All of these strings for bitemarks and food are given to you.
 
 */
 
+//top-voted solution on CodeWars:
+const food = {
+  dino   : { desc: 'a dead dino', marks: ['_C', 'C}>'] },
+  flowers: { desc: 'flowers', marks: ['iii', 'iii'] },
+  leaves : { desc: 'leaves', marks: ['|||', '|||'] }
+};
 
-//my solution
+const biteMarks =  {
+  'VvvvV': {name: 'A T-Rex', diet: [food.dino]},
+  'vvvvv': {name: 'A velociraptor', diet: [food.dino]},
+  'uuuuu': {name: 'A brachiosaurus', diet: [food.flowers, food.leaves]},
+  'uuVuu': {name: 'A triceratops', diet: [food.flowers]},
+  'unknown': {name: 'Something', diet: []}
+};
 
 class JurassicWord {
-    constructor() {
-      this.deadDino = "_C     C}>";
-      this.flowers = "iii     iii";
-      this.leaves = "|||     |||";
-      this.tRex = "VvvvV";
-      this.velociraptor = "vvvvv" ;
-      this.brachiosaurus = "uuuuu";
-      this.triceratops = "uuVuu";
-    }
+  
+  lunchTime(scene) {
+    let meal = Object.keys(food)
+      .map(key => food[key])
+      .find(f => scene.startsWith(f.marks[0]) && scene.endsWith(f.marks[1])) || 'something';
     
-    lunchTime(scene) {
-        
-    }
+    let marks = scene.substr((meal === 'something') ? 3 : meal.marks[0].length, 5);
+    const eater = biteMarks[marks] && (meal==='something' || biteMarks[marks].diet.includes(meal))
+      ? biteMarks[marks]
+      : biteMarks.unknown;
+    
+    return `${eater.name} is eating ${meal.desc || meal}.`;
   }
-
-
-
-//top-voted solution on CodeWars:
-
+}
 

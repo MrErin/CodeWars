@@ -9,4 +9,12 @@ www.codewars.com/users/MrErin
 
 ## Shell Script Conventions
 
-I have to reformulate the shell script to allow multiple languages. Will update this section in the future
+* $1 is title of the Kata
+* $2 is the kyu rating (number)
+* $3 is the link to the kata page
+* $4 is the language
+* $5 is the file extension (no dot)
+
+```sh
+codewars {title} {kyu number} {link} {language} {extension}
+```
